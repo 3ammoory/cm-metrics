@@ -1,0 +1,21 @@
+[project]
+name = "cm-metrics"
+version = "0.1.0"
+description = "CLI for fetching historical metrics data from CoinMetrics (free tier)"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "coinmetrics-api-client>=2024.0.0",
+    "pandas>=2.0",
+    "pyarrow>=10.0",
+]
+
+[project.scripts]
+cm-metrics = "cm_metrics.cli:cli"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
